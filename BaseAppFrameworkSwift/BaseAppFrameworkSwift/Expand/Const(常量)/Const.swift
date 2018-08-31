@@ -14,12 +14,12 @@ let ScreenWidth = UIScreen.main.bounds.size.width
 let ScreenHeight = UIScreen.main.bounds.size.height
 
 /// 圆角及边框
-func viewRadius(_ view:UIView, _ radio:Float, _ width:Float, _ color:UIColor) {
+func viewRadius(_ view: UIView, _ radio: Float, _ width: Float, _ color: UIColor) {
     view.layer.cornerRadius = CGFloat(radio)
     view.layer.masksToBounds = true
     view.layer.borderWidth = CGFloat(width)
     view.layer.borderColor = color.cgColor
-    //启光栅化
+    // 启光栅化
     view.layer.shouldRasterize = true
     view.layer.rasterizationScale = UIScreen.main.scale
 }

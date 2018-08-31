@@ -13,6 +13,17 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        var dict = [String: AnyObject]()
+        dict["name"] = "李明" as AnyObject
+        dict["age"] = 30 as AnyObject
+        UserInfoManager.update(userInfo: dict)
+        
+        print(UserInfoManager.userModel)
+        print(UserInfoManager.userModel.name as Any)
+
+        UserInfoManager.updateValue(value: "大明" as AnyObject, key: "name")
+        print(UserInfoManager.userModel)
+        print(UserInfoManager.userModel.name as Any)
     }
 
     override func didReceiveMemoryWarning() {

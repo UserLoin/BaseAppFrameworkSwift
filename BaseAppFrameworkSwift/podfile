@@ -1,8 +1,13 @@
 platform:ios,'8.0'
+inhibit_all_warnings!
+
 target 'BaseAppFrameworkSwift' do
  use_frameworks!
 
  pod 'SnapKit'
  pod 'Alamofire'
  pod 'SwiftyJSON'
+ pod 'YYKit'
+ pod 'MJExtension'
+ 
 end

@@ -58,9 +58,6 @@ class SPNavigationController: UINavigationController {
     @objc func back(){
         popViewController(animated: true)
     }
-    
-
-
 }
 
 //MARK: - UIGestureRecognizerDelegate

@@ -29,6 +29,7 @@
 		1567A12A2136982600ABDAE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1567A1292136982600ABDAE5 /* HomeViewController.swift */; };
 		1567A13121369B5900ABDAE5 /* SPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1567A13021369B5900ABDAE5 /* SPNavigationController.swift */; };
 		1567A13321369D0300ABDAE5 /* SPTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1567A13221369D0300ABDAE5 /* SPTabBarController.swift */; };
+		15F0B7D72138DAFB00B35629 /* UserInfoTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B7D62138DAFB00B35629 /* UserInfoTool.swift */; };
 		8D029079C93261A07CFFBEFA /* Pods_BaseAppFrameworkSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F383A942E08CA1B263DF6ED /* Pods_BaseAppFrameworkSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		1567A12B2136988B00ABDAE5 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		1567A13021369B5900ABDAE5 /* SPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPNavigationController.swift; sourceTree = "<group>"; };
 		1567A13221369D0300ABDAE5 /* SPTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTabBarController.swift; sourceTree = "<group>"; };
+		15F0B7D62138DAFB00B35629 /* UserInfoTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTool.swift; sourceTree = "<group>"; };
 		5F383A942E08CA1B263DF6ED /* Pods_BaseAppFrameworkSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseAppFrameworkSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E90DB002493CE74E00ED9E7 /* Pods-BaseAppFrameworkSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseAppFrameworkSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseAppFrameworkSwift/Pods-BaseAppFrameworkSwift.release.xcconfig"; sourceTree = "<group>"; };
 		CC0F3EE1D6772D214CDDACB3 /* Pods-BaseAppFrameworkSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseAppFrameworkSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseAppFrameworkSwift/Pods-BaseAppFrameworkSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -272,12 +274,12 @@
 		1567A11C2136975600ABDAE5 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				15F0B7D82138E6C100B35629 /* ObjectCode(OC代码) */,
 				152ACCF42137BA2A00B8CF1E /* Vender(第三方) */,
 				152ACCDF2137B7CD00B8CF1E /* Extension(扩展) */,
 				152ACCD221378EDD00B8CF1E /* HttpTool(网络请求) */,
 				1567A11E2136975600ABDAE5 /* Const(常量) */,
 				1567A11F2136975600ABDAE5 /* Controls(自定义控件) */,
-				1567A1202136975600ABDAE5 /* Macros(宏) */,
 				1567A1212136975600ABDAE5 /* Tool(工具类) */,
 			);
 			path = Expand;
@@ -300,16 +302,10 @@
 			path = "Controls(自定义控件)";
 			sourceTree = "<group>";
 		};
-		1567A1202136975600ABDAE5 /* Macros(宏) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Macros(宏)";
-			sourceTree = "<group>";
-		};
 		1567A1212136975600ABDAE5 /* Tool(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				15F0B7D62138DAFB00B35629 /* UserInfoTool.swift */,
 			);
 			path = "Tool(工具类)";
 			sourceTree = "<group>";
@@ -371,6 +367,13 @@
 				1567A1292136982600ABDAE5 /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		15F0B7D82138E6C100B35629 /* ObjectCode(OC代码) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ObjectCode(OC代码)";
 			sourceTree = "<group>";
 		};
 		A039CF30D7C4C740336CE65F /* Pods */ = {
@@ -564,14 +567,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BaseAppFrameworkSwift/Pods-BaseAppFrameworkSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -595,6 +602,7 @@
 				152ACCD42137902400B8CF1E /* HttpTool.swift in Sources */,
 				152ACCE22137B80C00B8CF1E /* HttpConst.swift in Sources */,
 				152ACCE32137B80C00B8CF1E /* Const.swift in Sources */,
+				15F0B7D72138DAFB00B35629 /* UserInfoTool.swift in Sources */,
 				152ACCFA2137BAC900B8CF1E /* BaseViewController.m in Sources */,
 				1567A13321369D0300ABDAE5 /* SPTabBarController.swift in Sources */,
 				152ACCF02137B88700B8CF1E /* UIBarButtonItem+Categary.swift in Sources */,
@@ -771,6 +779,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G2AKLYZSN2;
 				INFOPLIST_FILE = "$(SRCROOT)/BaseAppFrameworkSwift/Resource/Plist/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhishen.BaseAppFrameworkSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -788,6 +797,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G2AKLYZSN2;
 				INFOPLIST_FILE = "$(SRCROOT)/BaseAppFrameworkSwift/Resource/Plist/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhishen.BaseAppFrameworkSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";

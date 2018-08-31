@@ -19,8 +19,7 @@ extension String{
     ///   - color: 颜色
     /// - Returns: 返回的富文本字符串
     
-    func changeTextChange(regex: String, color: UIColor) -> NSMutableAttributedString
-    {
+    func changeTextChange(regex: String, color: UIColor) -> NSMutableAttributedString {
         let attributeString = NSMutableAttributedString(string: self)
         do {
             let regexExpression = try NSRegularExpression(pattern: regex, options: NSRegularExpression.Options())
@@ -43,12 +42,10 @@ extension String{
     ///   - color: 颜色
     /// - Returns: attributeString
     
-    func changeAttributeString(rangeStringArray:[String], color:UIColor ) -> NSMutableAttributedString
-    {
+    func changeAttributeString(rangeStringArray:[String], color:UIColor ) -> NSMutableAttributedString {
         let attributeString:NSMutableAttributedString = NSMutableAttributedString(string:self)
         let str = NSString(string: self)
         for rangeString in rangeStringArray {
-            
             let theRange = str.range(of: rangeString)
             attributeString.addAttribute(NSAttributedStringKey.foregroundColor, value: color, range: theRange)
             attributeString.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 14), range: theRange)
@@ -64,8 +61,7 @@ extension String{
     ///   - rangeString: 需要添加下/中划线的文本
     ///   - isStrike:    中划线
     ///   - isUnderline: 下划线
-    func  lineStyleAttributeString(rangeString: String, isStrike:Bool ,isUnderline:Bool) -> NSMutableAttributedString
-    {
+    func  lineStyleAttributeString(rangeString: String, isStrike:Bool ,isUnderline:Bool) -> NSMutableAttributedString {
         let attributeString:NSMutableAttributedString = NSMutableAttributedString(string:self)
         let str = NSString(string: self)
         let theRange = str.range(of: rangeString)

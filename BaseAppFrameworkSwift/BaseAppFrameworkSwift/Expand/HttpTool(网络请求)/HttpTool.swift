@@ -34,7 +34,7 @@ class HttpTool: NSObject {
         Alamofire.request(urlString, method: method, parameters: parameters).responseJSON { (response) in
             
             if response.result.isSuccess {
-                // print(JsonResponse(response.result.value as! [String : AnyObject]))
+                 print(JsonResponse(response.result.value as! [String : AnyObject]))
                 finishdCallBack(response.result.value as AnyObject ,nil)
             } else {
                 finishdCallBack(nil,response.result.error)
