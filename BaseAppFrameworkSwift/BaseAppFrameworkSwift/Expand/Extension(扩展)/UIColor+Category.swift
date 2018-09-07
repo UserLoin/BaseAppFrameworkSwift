@@ -8,8 +8,7 @@
 
 import UIKit
 
-extension UIColor
-{
+extension UIColor {
     
     /// 常见的蓝色
     class func commonBlueColor() -> UIColor {
@@ -29,14 +28,14 @@ extension UIColor
     }
     
     
-    ///RGBA
+    /// RGBA
     class func rgbaColor(_ red:Int ,_ green:Int ,_ blue:Int ,_ alpha:CGFloat) -> UIColor {
         return UIColor(red: CGFloat(red)/255.0,
                        green: CGFloat(green)/255.0,
                        blue: CGFloat(blue)/255.0,
                        alpha: alpha)
     }
-    ///RGBA
+    /// RGBA
     class func rgbColor(_ red:Int ,_ green:Int ,_ blue:Int) -> UIColor {
         return UIColor(red: CGFloat(red)/255.0,
                        green: CGFloat(green)/255.0,
@@ -46,7 +45,7 @@ extension UIColor
     
     
     /// 16进制 转 RGBA
-    class func rgbaColorFromHex(_ rgb:Int, _ alpha:CGFloat) ->UIColor {
+    class func rgbaColorFromHex(_ rgb:Int, _ alpha:CGFloat) -> UIColor {
         return UIColor(red: ((CGFloat)((rgb & 0xFF0000) >> 16)) / 255.0,
                        green: ((CGFloat)((rgb & 0xFF00) >> 8)) / 255.0,
                        blue: ((CGFloat)(rgb & 0xFF)) / 255.0,
